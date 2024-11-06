@@ -1,8 +1,14 @@
 import streamlit as st
+import os
+import locale
+from features.Menu import mainMenu
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+st.set_page_config(page_title="Proof of Concept App", layout="wide")
 
-st.balloons()
+locale.setlocale( locale.LC_ALL, '')
+
+st.session_state['menu_option'] = 'Home'
+st.session_state['username'] = os.getenv('USER_NAME','UNKNOWN!')
+st.session_state['customername'] = os.getenv('CUSTOMER_NAME','CUSTOMER_NAME !MISSING!')
+
+mainMenu()
