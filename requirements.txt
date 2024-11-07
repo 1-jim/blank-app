@@ -4,5 +4,3 @@ pandas
 streamlit
 streamlit_option_menu
 streamlit_js_eval
-pygwalker
-plotly

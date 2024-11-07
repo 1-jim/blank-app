@@ -4,7 +4,7 @@ import streamlit as st
 from streamlit.components.v1 import html
 from streamlit_js_eval import streamlit_js_eval
 
-def show_mermaider(code: str, font_size: int = 14, graph_height: int = 400) -> None:
+def show_mermaider(code: str, font_size: int = 14, graph_height: int = 600) -> None:
 
     if "mermaid_svg_height" not in st.session_state:
         st.session_state["mermaid_svg_height"] = graph_height
